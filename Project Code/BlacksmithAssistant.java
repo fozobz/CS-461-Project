@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 
 public class BlacksmithAssistant {
@@ -10,8 +11,13 @@ public class BlacksmithAssistant {
         JFrame window = new JFrame();
         window.setSize(w, h);
         window.setTitle("Blacksmithing Curve Assistant");
+        GraphicalPreview graphicalPreview = new GraphicalPreview(w, h);
+        window.add(graphicalPreview);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
+
+
+         
 
     }
     
