@@ -1,0 +1,21 @@
+Currently I'm working on developing the skills to implement a graphical preview
+that allows the user to visually verify that the curl they have specified is
+what they want.
+
+Basically, the user will adjust taper starts, inflection points, and curl density
+to create a specific shape. The program itself is really about the math of
+converting this shape to a standard bar size with the same volume, but the
+graphical preview will let the user see a rough design of the shape to verify
+they are doing what they want.
+
+As for the main functionality, I'm not sure how exactly to calculate the volume of
+a complex shape like a curl, but I think that doing things in steps might work.
+That is, to take the complex shape, and mathematically deconstruct it into a straight
+piece with specific tapers. Once I have the total length of the bar unrolled, I will
+calculate the volume and then calculate the volumes of the tapered pieces and subtract
+the difference, leaving the correct volume. Then I'll take the max diameter of the
+complex shape and calculate the length needed in the next few standard bar sizes up.
+
+GitHub repo: https://github.com/fozobz/CS-461-Project
+
+NOTE: I mistakenly named it CS 461 instead of 407, I'll probably go back and fix this later.

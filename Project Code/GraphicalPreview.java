@@ -4,13 +4,16 @@ import java.awt.geom.*;
 
 public class GraphicalPreview extends JComponent{
 
+    private Spiral spiral;
+
     public GraphicalPreview(int w, int h){
         int width = w;
         int height = h;
+        spiral = new Spiral(5, 5, 3);
     }
-    public void drawObject(Graphics g, int width, int height){
+    protected void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
-        Rectangle2D.Double r = new Rectangle2D.Double(0,0, width/5, height/5);
-        g2.draw(r);
+
+        spiral.drawSpiral(g2, 0, 100);
     }
 }
