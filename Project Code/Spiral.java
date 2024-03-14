@@ -14,17 +14,6 @@ public class Spiral {
         this.inflectionCount = inflectionCount;
     }
 
-    private double getTheta(int i,Double b){
-        return i/b;
-    }
-
-    private double getPolarX(double r, Double spiralAngle){
-        return r * Math.sin(spiralAngle);
-    }
-
-    private double getPolarY(double r, Double spiralAngle){
-        return r * Math.cos(spiralAngle);
-    }
 
     public void drawSpiral(Graphics2D g2,int x, int y){
         Double b = 1.0;
